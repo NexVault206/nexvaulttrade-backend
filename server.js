@@ -46,6 +46,7 @@ app.use('/api/auth', authLimiter);
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/user', require('./routes/user'));
 app.use('/api/admin', require('./routes/admin'));
+app.use('/api/messages', require('./routes/messages'));
 
 app.get('/api/health', (req, res) => res.json({ status: 'ok', time: new Date().toISOString() }));
 
